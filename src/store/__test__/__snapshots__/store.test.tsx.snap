@@ -1,0 +1,21 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`store should match initial state 1`] = `
+Object {
+  "collection": Array [],
+  "composition": Object {
+    "decks": Array [],
+    "pool": Array [],
+  },
+  "settings": Object {
+    "includedSets": Array [
+      "ONE",
+      "J22",
+      "BRO",
+      "DMU",
+      "JMP",
+    ],
+    "paletteMode": "dark",
+  },
+}
+`;
