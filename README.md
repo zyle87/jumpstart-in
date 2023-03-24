@@ -8,7 +8,7 @@
 
 🎲 [Jumpstart In!](https://jumpstart-in.netlify.app/) is an unofficial tool that emulates the packet _"draft"_ from **MTGA** [Jump In!](https://mtg.fandom.com/wiki/Jump_In!) with **MTG** [Jumpstart](<https://mtg.fandom.com/wiki/Jumpstart_(format)>).
 
-🎲 [Jumpstart In!](https://jumpstart-in.netlify.app/) currently does not communicate with any kind of backend. All user data, like e.g. your collection are saved locally on you device in your browser instance of locale storag. This way you will always be able to use the app, even during periods where you do not have an internet connection.
+🎲 [Jumpstart In!](https://jumpstart-in.netlify.app/) currently does not communicate with any kind of backend. All user data, like e.g. your collection are saved locally on you device in your browser instance of local storage. This way you will always be able to use the app, even during periods where you do not have an internet connection.
 
 ## How to use
 
