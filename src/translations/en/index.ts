@@ -17,6 +17,7 @@ export const en = {
   import: 'Import',
   included_sets: 'Included sets',
   mythic: 'Mythic',
+  toggle_palette_mode: 'Toggle mode',
   no_deck_composed_yet: 'No deck composed yet.',
   open_wiki: 'Open wiki',
   rare: 'Rare',

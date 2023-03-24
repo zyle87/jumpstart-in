@@ -15,6 +15,7 @@ import Typography from '@mui/material/Typography'
 import { FC, useCallback, useContext, useState } from 'react'
 import MTGColorIcon from '../components/MTGColorIcon'
 import { data } from '../data'
+import packageJson from '../../package.json'
 import { useCollection } from '../hooks/useCollection'
 import { useComposition } from '../hooks/useComposition'
 import { useMTGTools } from '../hooks/useMTGTools'
@@ -285,13 +286,25 @@ const CollectionPage: FC = () => {
           }}
           value={stringifiedCollection}
         />
-        <Box mt={1} textAlign="right">
-          <Button disabled={onHold} onClick={importCollection}>
-            {t('import')}
-          </Button>
-          <Button disabled={onHold} onClick={exportCollection}>
-            {t('export')}
-          </Button>
+        <Box
+          mt={1}
+          display="flex"
+          alignItems="center"
+          justifyContent="space-between"
+        >
+          <Box>
+            <Typography variant="overline">
+              version: {packageJson.version}
+            </Typography>
+          </Box>
+          <Box>
+            <Button disabled={onHold} onClick={importCollection}>
+              {t('import')}
+            </Button>
+            <Button disabled={onHold} onClick={exportCollection}>
+              {t('export')}
+            </Button>
+          </Box>
         </Box>
       </Box>
       <Box

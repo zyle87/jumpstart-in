@@ -50,7 +50,11 @@ const Root: FC = () => {
               disableGutters
               sx={{ justifyContent: 'space-between', position: 'relative' }}
             >
-              <Link to="/" style={{ textDecoration: 'none', color: 'inherit' }}>
+              <Link
+                to="/"
+                style={{ textDecoration: 'none', color: 'inherit' }}
+                aria-label={t('composition')}
+              >
                 <Box display="flex" alignItems="center">
                   <Box mr={2}>
                     <i className="ss ss-j21 ss-3x" />
@@ -62,7 +66,12 @@ const Root: FC = () => {
               </Link>
               <Box display="flex">
                 <Box mr={1}>
-                  <IconButton color="inherit" onClick={togglePaletteMode}>
+                  <IconButton
+                    aria-label={t('toggle_palette_mode')}
+                    color="inherit"
+                    onClick={togglePaletteMode}
+                    title={t('toggle_palette_mode')}
+                  >
                     {settings.paletteMode === 'light' ? (
                       <DarkModeIcon />
                     ) : (
@@ -71,6 +80,7 @@ const Root: FC = () => {
                   </IconButton>
                 </Box>
                 <IconButton
+                  aria-label={t('collection')}
                   color="inherit"
                   component={Link}
                   to="/collection"
