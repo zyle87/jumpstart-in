@@ -1,17 +1,21 @@
 import { RootState } from '.'
 
 export const loadState: () => Undefinable<RootState> = () => {
-  try {
-    const serializedState = localStorage.getItem('state')
+  const serializedState = localStorage.getItem('state')
 
-    return serializedState === null ? undefined : JSON.parse(serializedState)
-  } catch (err) {}
+  const preloadedState =
+    serializedState === null
+      ? undefined
+      : (JSON.parse(serializedState) as RootState)
+
+  return preloadedState &&
+    preloadedState.settings.storeVersion === process.env.REACT_APP_STORE_VERSION
+    ? preloadedState
+    : undefined
 }
 
 export const saveState = (state: RootState) => {
-  try {
-    const serializedState = JSON.stringify(state)
+  const serializedState = JSON.stringify(state)
 
-    localStorage.setItem('state', serializedState)
-  } catch (err) {}
+  localStorage.setItem('state', serializedState)
 }

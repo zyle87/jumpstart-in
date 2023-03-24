@@ -16,6 +16,7 @@ Object {
       "JMP",
     ],
     "paletteMode": "dark",
+    "storeVersion": "v1",
   },
 }
 `;
