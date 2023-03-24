@@ -17,16 +17,16 @@ export const fr = {
   import: 'Importer',
   included_sets: 'Sets inclus',
   mythic: 'Mythique',
-  no_deck_composed: 'Aucun deck composé',
+  no_deck_composed_yet: 'Aucun deck composé pour le moment.',
   open_wiki: 'Ouvrir le wiki',
   rare: 'Rare',
   red: 'Rouge',
   resign: 'Abandonner',
   white: 'Blanc',
   poor_pool_error:
-    'Vous devez avoir au moins 4 thèmes dans votre pool de collection pour composer un deck.',
+    'Vous devez avoir au moins 4 paquets dans votre pool de collection pour composer un deck.',
   finish_deck_before_compose:
-    'Vous devez terminer votre deck actuel avant de composer un nouveau deck.',
+    "Vous devez terminer votre deck actuel avant d'en composer un nouveau.",
   finish_deck_before_edit:
     "Vous devez terminer votre deck actuel avant d'éditer votre collection.",
   ...J22,

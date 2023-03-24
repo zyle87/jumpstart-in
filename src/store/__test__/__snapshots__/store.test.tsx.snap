@@ -1,5 +1,57 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`store should add a booster to the collection 1`] = `
+Object {
+  "collection": Array [
+    Object {
+      "TKey": "mite_y",
+      "color": "white",
+      "featured": "",
+      "front": "https://cards.scryfall.io/large/front/1/6/162c2282-d32e-4465-abc8-df0e858ec118.jpg?1675299139",
+      "id": "ONE-001",
+      "rarity": "common",
+      "variant": 1,
+    },
+  ],
+  "composition": Object {
+    "decks": Array [],
+    "pool": Array [],
+  },
+  "settings": Object {
+    "includedSets": Array [
+      "ONE",
+      "J22",
+      "BRO",
+      "DMU",
+      "JMP",
+    ],
+    "paletteMode": "light",
+    "storeVersion": "v1",
+  },
+}
+`;
+
+exports[`store should clear the whole collection 1`] = `
+Object {
+  "collection": Array [],
+  "composition": Object {
+    "decks": Array [],
+    "pool": Array [],
+  },
+  "settings": Object {
+    "includedSets": Array [
+      "ONE",
+      "J22",
+      "BRO",
+      "DMU",
+      "JMP",
+    ],
+    "paletteMode": "light",
+    "storeVersion": "v1",
+  },
+}
+`;
+
 exports[`store should match initial state 1`] = `
 Object {
   "collection": Array [],
@@ -15,7 +67,28 @@ Object {
       "DMU",
       "JMP",
     ],
-    "paletteMode": "dark",
+    "paletteMode": "light",
+    "storeVersion": "v1",
+  },
+}
+`;
+
+exports[`store should remove a booster from the collection 1`] = `
+Object {
+  "collection": Array [],
+  "composition": Object {
+    "decks": Array [],
+    "pool": Array [],
+  },
+  "settings": Object {
+    "includedSets": Array [
+      "ONE",
+      "J22",
+      "BRO",
+      "DMU",
+      "JMP",
+    ],
+    "paletteMode": "light",
     "storeVersion": "v1",
   },
 }
