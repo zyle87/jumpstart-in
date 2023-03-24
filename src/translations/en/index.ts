@@ -24,7 +24,7 @@ export const en = {
   resign: 'Resign',
   white: 'White',
   poor_pool_error:
-    'You need at least 4 themes in your collection pool to compose a deck.',
+    'You need at least 4 packets in your collection pool to compose a deck.',
   finish_deck_before_compose:
     'You need to finish you current deck before composing a new one.',
   finish_deck_before_edit:

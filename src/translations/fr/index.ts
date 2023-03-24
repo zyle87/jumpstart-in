@@ -24,7 +24,7 @@ export const fr = {
   resign: 'Abandonner',
   white: 'Blanc',
   poor_pool_error:
-    'Vous devez avoir au moins 4 thèmes dans votre pool de collection pour composer un deck.',
+    'Vous devez avoir au moins 4 paquets dans votre pool de collection pour composer un deck.',
   finish_deck_before_compose:
     'Vous devez terminer votre deck actuel avant de composer un nouveau deck.',
   finish_deck_before_edit:
