@@ -39,19 +39,14 @@ export const useCollection = () => {
 
     const boosters = data.sets.map(set => set.boosters).flat()
 
-    stringifiedCollection
-      .split('\n')
-      .forEach(entry =>
-        dispatch(
-          collectionActions.add(
-            boosters.find(
-              booster =>
-                booster.id === entry.split(' ')[0] &&
-                booster.variant === parseInt(entry.split(' ')[1].substring(1))
-            )!
-          )
-        )
-      )
+    stringifiedCollection.split('\n').forEach(entry => {
+      const booster = boosters.find(
+        booster =>
+          booster.id === entry.split(' ')[0] &&
+          booster.variant === parseInt(entry.split(' ')[1].substring(1))
+      )!
+      booster && dispatch(collectionActions.add(booster))
+    })
   }, [dispatch, stringifiedCollection])
 
   const exportCollection = useCallback(() => {
