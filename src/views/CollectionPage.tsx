@@ -30,7 +30,7 @@ const CollectionPage: FC = () => {
     stringifiedCollection,
     setStringifiedCollection,
   } = useCollection()
-  const { currentDeck } = useComposition()
+  const { onHold } = useComposition()
   const { t } = useContext(TranslateContext)
   const { getHexFromRarity } = useMTGTools()
 
@@ -40,11 +40,6 @@ const CollectionPage: FC = () => {
     useState<Nullable<string>>(null)
   const [imageToShowcase, setImageToShowcase] = useState<Nullable<string>>(null)
   const [atPosition, setAtPosition] = useState([0, 0])
-
-  const onHold = useMemo(
-    () => currentDeck && currentDeck.length !== 2,
-    [currentDeck]
-  )
 
   const hasCompletedRarity = useCallback(
     (set: MTG.Set, color: MTG.Color, rarity: MTG.Rarity) =>
