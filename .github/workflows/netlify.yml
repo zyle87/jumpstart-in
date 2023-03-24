@@ -9,11 +9,6 @@ jobs:
   publish:
     runs-on: ubuntu-latest
     environment: netlify
-    strategy:
-      matrix:
-        node: [18]
-        # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
-
     steps:
       - uses: actions/setup-node@master
         with:
