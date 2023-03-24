@@ -25,7 +25,7 @@ Object {
       "DMU",
       "JMP",
     ],
-    "paletteMode": "dark",
+    "paletteMode": "light",
     "storeVersion": "v1",
   },
 }
@@ -46,7 +46,7 @@ Object {
       "DMU",
       "JMP",
     ],
-    "paletteMode": "dark",
+    "paletteMode": "light",
     "storeVersion": "v1",
   },
 }
@@ -67,7 +67,7 @@ Object {
       "DMU",
       "JMP",
     ],
-    "paletteMode": "dark",
+    "paletteMode": "light",
     "storeVersion": "v1",
   },
 }
@@ -88,7 +88,7 @@ Object {
       "DMU",
       "JMP",
     ],
-    "paletteMode": "dark",
+    "paletteMode": "light",
     "storeVersion": "v1",
   },
 }

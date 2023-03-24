@@ -8,7 +8,7 @@ export type SettingsState = {
 }
 
 const initialState: SettingsState = {
-  paletteMode: 'dark',
+  paletteMode: 'light',
   includedSets: [...data.sets.map(set => set.id)],
   storeVersion: process.env.REACT_APP_STORE_VERSION,
 }

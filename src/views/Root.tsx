@@ -1,4 +1,6 @@
 import CollectionIcon from '@mui/icons-material/AutoStoriesRounded'
+import DarkModeIcon from '@mui/icons-material/DarkModeRounded'
+import LightModeIcon from '@mui/icons-material/LightModeRounded'
 import AppBar from '@mui/material/AppBar'
 import Box from '@mui/material/Box'
 import Container from '@mui/material/Container'
@@ -9,11 +11,14 @@ import Typography from '@mui/material/Typography'
 import { ThemeProvider } from '@mui/material/styles'
 import { FC, useCallback, useContext } from 'react'
 import { Link, Outlet, useLocation } from 'react-router-dom'
+import { useAppSelector } from 'src/hooks/useAppSelector'
+import { usePaletteMode } from 'src/hooks/usePaletteMode'
 import { TranslateContext } from '../hooks/useTranslate'
-import { customTheme } from '../theme'
 
 const Root: FC = () => {
   const location = useLocation()
+  const { theme, togglePaletteMode } = usePaletteMode()
+  const settings = useAppSelector(state => state.settings)
   const { t } = useContext(TranslateContext)
 
   const getTitleAndDescription = useCallback((): {
@@ -36,7 +41,7 @@ const Root: FC = () => {
   }, [location.pathname])
 
   return (
-    <ThemeProvider theme={customTheme}>
+    <ThemeProvider theme={theme}>
       <CssBaseline />
       <Box component="main">
         <AppBar position="static">
@@ -56,16 +61,15 @@ const Root: FC = () => {
                 </Box>
               </Link>
               <Box display="flex">
-                {/* <Box mr={1}>
-                  <IconButton
-                    color="inherit"
-                    component={Link}
-                    to="/"
-                    title={t('composition')}
-                  >
-                    <i className="ss ss-bcore" title={t('composition')} />
+                <Box mr={1}>
+                  <IconButton color="inherit" onClick={togglePaletteMode}>
+                    {settings.paletteMode === 'light' ? (
+                      <DarkModeIcon />
+                    ) : (
+                      <LightModeIcon />
+                    )}
                   </IconButton>
-                </Box> */}
+                </Box>
                 <IconButton
                   color="inherit"
                   component={Link}

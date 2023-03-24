@@ -57,9 +57,7 @@ const CollectionPage: FC = () => {
       <Box>
         <Box mb={2}>
           {onHold && (
-            <Alert severity="warning" variant="filled">
-              {t('finish_deck_before_edit')}
-            </Alert>
+            <Alert severity="info">{t('finish_deck_before_edit')}</Alert>
           )}
         </Box>
         <Box>
