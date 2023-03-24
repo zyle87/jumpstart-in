@@ -4,11 +4,13 @@ import { data } from '../../data'
 export type SettingsState = {
   paletteMode: PaletteMode
   includedSets: string[]
+  storeVersion: string
 }
 
 const initialState: SettingsState = {
   paletteMode: 'dark',
   includedSets: [...data.sets.map(set => set.id)],
+  storeVersion: process.env.REACT_APP_STORE_VERSION,
 }
 
 export const settingsSlice = createSlice({
