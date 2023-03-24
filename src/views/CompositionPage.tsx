@@ -31,8 +31,13 @@ import { settingsActions } from '../store/slices/settingsSlice'
 const CompositionPage: FC = () => {
   const dispatch = useAppDispatch()
   const settings = useAppSelector(state => state.settings)
-  const { composition, composeNewDeck, addBoosterToCurrentDeck, currentDeck } =
-    useComposition()
+  const {
+    composition,
+    composeNewDeck,
+    addBoosterToCurrentDeck,
+    currentDeck,
+    onHold,
+  } = useComposition()
   const { t } = useContext(TranslateContext)
   const {
     getHexFromRarity,
@@ -259,6 +264,7 @@ const CompositionPage: FC = () => {
                     key={set.id}
                     control={
                       <Checkbox
+                        disabled={onHold}
                         checked={settings.includedSets.indexOf(set.id) > -1}
                         onChange={event => {
                           const id = set.id

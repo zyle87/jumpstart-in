@@ -20,6 +20,11 @@ export const useComposition = () => {
     [composition.decks]
   )
 
+  const onHold = useMemo(
+    () => currentDeck && currentDeck.length !== 2,
+    [currentDeck]
+  )
+
   const composeNewDeck = useCallback(() => {
     dispatch(compositionActions.initDeck())
   }, [dispatch])
@@ -63,5 +68,6 @@ export const useComposition = () => {
     composeNewDeck,
     addBoosterToCurrentDeck,
     currentDeck,
+    onHold,
   }
 }
