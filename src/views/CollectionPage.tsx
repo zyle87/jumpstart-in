@@ -94,10 +94,7 @@ const CollectionPage: FC = () => {
                 >
                   <Box display="flex" alignItems="center">
                     <Box mr={2} width={32} textAlign="center">
-                      <i
-                        className={`ss ss-${set.id.toLowerCase()} ss-2x`}
-                        title={set.name}
-                      />
+                      <i className={`ss ss-${set.id.toLowerCase()} ss-2x`} />
                     </Box>
                     <Typography>{set.name}</Typography>
                   </Box>
