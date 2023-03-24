@@ -3,7 +3,10 @@ name: Jest
 on:
   push:
     branches:
-      - 'develop'
+      - develop
+  pull_request:
+    branches:
+      - develop
 
 jobs:
   jest:
