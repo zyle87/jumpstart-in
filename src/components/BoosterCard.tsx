@@ -5,7 +5,7 @@ import { useMTGTools } from '../hooks/useMTGTools'
 
 type Props = { booster: MTG.Booster; withFeatured?: boolean }
 
-const MTGCard: FC<Props> = ({ booster, withFeatured }) => {
+const BoosterCard: FC<Props> = ({ booster, withFeatured }) => {
   const { getSetFromBooster, getHexFromRarity } = useMTGTools()
   const [showFeatured, setShowFeatured] = useState(false)
 
@@ -82,4 +82,4 @@ const MTGCard: FC<Props> = ({ booster, withFeatured }) => {
   )
 }
 
-export default MTGCard
+export default BoosterCard

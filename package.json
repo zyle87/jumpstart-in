@@ -1,6 +1,6 @@
 {
   "name": "jumpstart-in",
-  "version": "0.6.0",
+  "version": "development",
   "private": true,
   "dependencies": {
     "@emotion/react": "^11.10.6",

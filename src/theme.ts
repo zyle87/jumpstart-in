@@ -19,5 +19,8 @@ export const customTheme = createTheme({
       fontFamily: 'Plus Jakarta Sans',
       fontWeight: 800,
     },
+    overline: {
+      fontFamily: 'Plus Jakarta Sans',
+    },
   },
 })

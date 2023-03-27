@@ -13,8 +13,9 @@ import IconButton from '@mui/material/IconButton'
 import TextField from '@mui/material/TextField'
 import Typography from '@mui/material/Typography'
 import { FC, useCallback, useContext, useState } from 'react'
-import MTGColorIcon from '../components/MTGColorIcon'
+import ColorIcon from '../components/ColorIcon'
 import { data } from '../data'
+import packageJson from '../../package.json'
 import { useCollection } from '../hooks/useCollection'
 import { useComposition } from '../hooks/useComposition'
 import { useMTGTools } from '../hooks/useMTGTools'
@@ -57,7 +58,9 @@ const CollectionPage: FC = () => {
       <Box>
         <Box mb={2}>
           {onHold && (
-            <Alert severity="info">{t('finish_deck_before_edit')}</Alert>
+            <Alert severity="info">
+              {t('finish_deck_before_editing_collection_info')}
+            </Alert>
           )}
         </Box>
         <Box>
@@ -127,7 +130,7 @@ const CollectionPage: FC = () => {
                         >
                           <Box display="flex" alignItems="center">
                             <Box mr={2}>
-                              <MTGColorIcon type={color} />
+                              <ColorIcon type={color} />
                             </Box>
                             <Typography>{t(color)}</Typography>
                           </Box>
@@ -285,13 +288,25 @@ const CollectionPage: FC = () => {
           }}
           value={stringifiedCollection}
         />
-        <Box mt={1} textAlign="right">
-          <Button disabled={onHold} onClick={importCollection}>
-            {t('import')}
-          </Button>
-          <Button disabled={onHold} onClick={exportCollection}>
-            {t('export')}
-          </Button>
+        <Box
+          mt={1}
+          display="flex"
+          alignItems="center"
+          justifyContent="space-between"
+        >
+          <Box>
+            <Typography variant="overline">
+              version: {packageJson.version}
+            </Typography>
+          </Box>
+          <Box>
+            <Button disabled={onHold} onClick={importCollection}>
+              {t('import')}
+            </Button>
+            <Button disabled={onHold} onClick={exportCollection}>
+              {t('export')}
+            </Button>
+          </Box>
         </Box>
       </Box>
       <Box

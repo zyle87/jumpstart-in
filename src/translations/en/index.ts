@@ -6,7 +6,6 @@ export const en = {
   collection: 'Collection',
   collection_description: 'Collection description',
   colorless: 'Colorless',
-  combination: 'Combination',
   common: 'Common',
   compose_new_deck: 'Compose new deck',
   composition: 'Composition',
@@ -17,6 +16,7 @@ export const en = {
   import: 'Import',
   included_sets: 'Included sets',
   mythic: 'Mythic',
+  toggle_palette_mode: 'Toggle mode',
   no_deck_composed_yet: 'No deck composed yet.',
   open_wiki: 'Open wiki',
   rare: 'Rare',
@@ -25,9 +25,9 @@ export const en = {
   white: 'White',
   poor_pool_error:
     'You need at least 4 packets in your collection pool to compose a deck.',
-  finish_deck_before_compose:
+  finish_deck_before_composing_info:
     'You need to finish your current deck before composing a new one.',
-  finish_deck_before_edit:
+  finish_deck_before_editing_collection_info:
     'You need to finish your current deck before editing your collection.',
   ...J22,
 }
