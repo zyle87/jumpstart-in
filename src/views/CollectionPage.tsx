@@ -13,7 +13,7 @@ import IconButton from '@mui/material/IconButton'
 import TextField from '@mui/material/TextField'
 import Typography from '@mui/material/Typography'
 import { FC, useCallback, useContext, useState } from 'react'
-import MTGColorIcon from '../components/MTGColorIcon'
+import ColorIcon from '../components/ColorIcon'
 import { data } from '../data'
 import packageJson from '../../package.json'
 import { useCollection } from '../hooks/useCollection'
@@ -58,7 +58,9 @@ const CollectionPage: FC = () => {
       <Box>
         <Box mb={2}>
           {onHold && (
-            <Alert severity="info">{t('finish_deck_before_edit')}</Alert>
+            <Alert severity="info">
+              {t('finish_deck_before_editing_collection_info')}
+            </Alert>
           )}
         </Box>
         <Box>
@@ -128,7 +130,7 @@ const CollectionPage: FC = () => {
                         >
                           <Box display="flex" alignItems="center">
                             <Box mr={2}>
-                              <MTGColorIcon type={color} />
+                              <ColorIcon type={color} />
                             </Box>
                             <Typography>{t(color)}</Typography>
                           </Box>

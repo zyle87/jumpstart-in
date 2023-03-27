@@ -26,9 +26,9 @@ export const fr = {
   white: 'Blanc',
   poor_pool_error:
     'Vous devez avoir au moins 4 paquets dans votre pool de collection pour composer un deck.',
-  finish_deck_before_compose:
+  finish_deck_before_composing_info:
     "Vous devez terminer votre deck actuel avant d'en composer un nouveau.",
-  finish_deck_before_edit:
+  finish_deck_before_editing_collection_info:
     "Vous devez terminer votre deck actuel avant d'éditer votre collection.",
   ...J22,
 }

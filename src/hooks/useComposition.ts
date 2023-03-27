@@ -29,6 +29,13 @@ export const useComposition = () => {
     dispatch(compositionActions.initDeck())
   }, [dispatch])
 
+  const deleteDeck = useCallback(
+    (index: number) => {
+      dispatch(compositionActions.deleteDeck(index))
+    },
+    [dispatch]
+  )
+
   const addBoosterToCurrentDeck = useCallback(
     (booster: MTG.Booster) => {
       dispatch(compositionActions.addBooster(booster))
@@ -68,6 +75,7 @@ export const useComposition = () => {
     composeNewDeck,
     addBoosterToCurrentDeck,
     currentDeck,
+    deleteDeck,
     onHold,
   }
 }

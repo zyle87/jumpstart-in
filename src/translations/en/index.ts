@@ -6,7 +6,6 @@ export const en = {
   collection: 'Collection',
   collection_description: 'Collection description',
   colorless: 'Colorless',
-  combination: 'Combination',
   common: 'Common',
   compose_new_deck: 'Compose new deck',
   composition: 'Composition',
@@ -26,9 +25,9 @@ export const en = {
   white: 'White',
   poor_pool_error:
     'You need at least 4 packets in your collection pool to compose a deck.',
-  finish_deck_before_compose:
+  finish_deck_before_composing_info:
     'You need to finish your current deck before composing a new one.',
-  finish_deck_before_edit:
+  finish_deck_before_editing_collection_info:
     'You need to finish your current deck before editing your collection.',
   ...J22,
 }

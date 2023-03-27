@@ -5,7 +5,7 @@ type Props = {
   size?: number
 }
 
-const MTGColorIcon: FC<Props> = ({ type, size }) => {
+const ColorIcon: FC<Props> = ({ type, size }) => {
   const renderVector = useCallback(() => {
     switch (type) {
       case 'white':
@@ -108,4 +108,4 @@ const MTGColorIcon: FC<Props> = ({ type, size }) => {
   )
 }
 
-export default MTGColorIcon
+export default ColorIcon
